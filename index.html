@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LeAlbum</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header sleek">
+    <img src="profile.jpg" alt="LeBron James" class="profile-pic" />
+    <div class="album-info">
+      <p class="label">Album</p>
+      <h1>LeAlbum</h1>
+      <p class="meta">Lebron James • 2025 • 10 songs</p>
+      <div class="buttons">
+        <button id="shuffleBtn" class="shuffle-button" onclick="shufflePlay()">
+          <img src="shuffle.png" alt="Shuffle" style="width: 15px; height: 15px; vertical-align: middle; margin-right: 6px;">
+          Shuffle
+        </button>        
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <button>X</button>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="tracklist">
+      <div class="tracklist-header">
+        <span class="title-label">Title</span>
+        <span style="font-size: 0.9rem; color: #aaa;">Duration</span>
+      </div>
+      <div id="tracks"></div>
+    </section>
+  </main>
+
+  
+  
+  <footer>
+    <div class="footer-left">
+      <img src="profile.jpg" alt="Now Playing" />
+      <div>
+        <strong id="now-title">Dunk Mode</strong><br />
+        <small id="now-artist">Lebron James</small>
+      </div>
+    </div>
+    <div class="footer-center">
+      <div class="controls">
+        <button onclick="prevTrack()">⏮</button>
+        <button class="main-play" onclick="togglePlay()">▶</button>
+        <button onclick="nextTrack()">⏭</button>
+      </div>
+      <div class="progress">
+        <span id="currentTime">0:00</span>
+        <div class="bar">
+          <div class="fill" id="progressFill"></div>
+        </div>
+        <span id="duration">0:00</span>
+      </div>
+    </div>
+    <audio id="audioPlayer" src="" ontimeupdate="updateProgress()" onloadedmetadata="setDuration()"></audio>
+  </footer>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

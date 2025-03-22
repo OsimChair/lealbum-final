@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+.header {
+  background: linear-gradient(to bottom, #555, #111);
+
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.album-info .label {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 0;
+}
+.album-info h1 {
+  font-size: 3rem;
+  margin: 0.2rem 0;
+}
+.meta {
+  color: #999;
+}
+.buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+button {
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: bold;
+}
+button#playBtn {
+  background-color: #1db954;
+  color: #000;
+}
+.container {
+  max-width: 100%;
+  padding: 2rem;
+}
+.tracklist-header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3.2rem;
+
+  padding-left: 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  color: #aaa;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+}
+.track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121212;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  transition: background 0.3s;
+
+  padding-left: 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121212;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+.track:hover {
+  background-color: #1e1e1e;
+}
+.track button {
+  margin-right: 16px;
+
+  background: none;
+  color: #1db954;
+  font-size: 1rem;
+  padding: 0;
+  cursor: pointer;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #333;
+}
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.footer-left img {
+  width: 50px;
+  border-radius: 4px;
+}
+.footer-center {
+  flex-grow: 1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.controls button {
+  background: none;
+  color: white;
+  font-size: 1rem;
+  border: none;
+}
+.controls .main-play {
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  padding: 0.3rem 0.6rem;
+}
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.bar {
+  flex-grow: 1;
+  height: 4px;
+  background: #444;
+  border-radius: 2px;
+  position: relative;
+}
+.fill {
+  width: 0%;
+  height: 100%;
+  background: #1db954;
+  border-radius: 2px;
+}
+
+
+.track-title {
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.2px;
+}
+
+.track-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.track-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.tracklist-header span.title-label {
+  display: inline-block;
+  transform: translateY(2px);
+}
+
+.shuffle-button {
+  background-color: #1db954;
+  color: black;
+}
+
+.shuffle-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .track {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .track span.duration {
+    align-self: flex-end;
+  }
+
+  .controls,
+  .footer-controls {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-controls button {
+    font-size: 20px;
+  }
+
+  .title-bar,
+  .track-list {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
